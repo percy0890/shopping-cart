@@ -1,0 +1,9 @@
+deployment:
+production:
+branch: master
+commands:
+- ng build --prod && firebase deploy
+
+test:
+override:
+- echo 'no tests, just say us Okay!'
