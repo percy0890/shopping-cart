@@ -1,0 +1,32 @@
+[debug] [2018-03-06T05:15:33.998Z] ----------------------------------------------------------------------
+[debug] [2018-03-06T05:15:34.000Z] Command:       /Users/prashant/.nvm/versions/node/v9.6.1/bin/node /Users/prashant/.nvm/versions/node/v9.6.1/bin/firebase deploy
+[debug] [2018-03-06T05:15:34.000Z] CLI Version:   3.17.4
+[debug] [2018-03-06T05:15:34.000Z] Platform:      darwin
+[debug] [2018-03-06T05:15:34.000Z] Node Version:  v9.6.1
+[debug] [2018-03-06T05:15:34.001Z] Time:          Tue Mar 06 2018 10:45:34 GMT+0530 (IST)
+[debug] [2018-03-06T05:15:34.001Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-06T05:15:34.013Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-06T05:15:34.013Z] > authorizing via signed-in user
+[debug] [2018-03-06T05:15:34.014Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-06T05:15:34.015Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/jAcWBZwIgKxkRjqmox2zVgCC70_bTJ15DfMAJ5bK6Es',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Mar 06 2018 10:45:34 GMT+0530 (IST)
+[info] 
+[warn] ⚠  Your CLI authentication needs to be updated to take advantage of new features.
+[warn] ⚠  Please run firebase login --reauth
+[info] 
+[debug] [2018-03-06T05:17:05.481Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2018-03-06T05:17:05.487Z] > authorizing via signed-in user
+[debug] [2018-03-06T05:17:05.489Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-06T05:17:05.490Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/jAcWBZwIgKxkRjqmox2zVgCC70_bTJ15DfMAJ5bK6Es',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Mar 06 2018 10:47:05 GMT+0530 (IST)
