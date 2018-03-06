@@ -1,9 +1,8 @@
-deployment:
-production:
-branch: master
-commands:
-- ng build --prod && firebase deploy
-
-test:
-override:
-- echo 'no tests, just say us Okay!'
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:9.3.0
+    steps:
+      - checkout
+      - run: ng -- build --prod && firebase deploy
