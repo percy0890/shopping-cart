@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
+/* we are not importing bootstrap.js because it has a dependency on jquery( jquery directly manipulates the DOM) 
+   so we should avoid using jquery and rely on angular...
+   instead use ng-bootstrap...
+*/
+
 body {
   padding: 80px;
 }
