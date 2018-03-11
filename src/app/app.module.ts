@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,7 +41,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
