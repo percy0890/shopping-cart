@@ -1,4 +1,5 @@
-import { AuthService } from './auth.service';
+import { AuthGuard } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
@@ -41,7 +42,10 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
