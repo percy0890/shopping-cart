@@ -1,3 +1,4 @@
+import { UserService } from './services/user.service';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -44,7 +45,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
   ],
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
