@@ -17,7 +17,7 @@ export class AppComponent {
         let returnUrl = localStorage.getItem('returnUrl');
         router.navigateByUrl(returnUrl);
       } else {
-        router.navigateByUrl('/login');
+        router.navigateByUrl('/');
       }
     })
   }
