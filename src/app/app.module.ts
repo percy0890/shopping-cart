@@ -1,3 +1,5 @@
+import { ProductsService } from './services/products.service';
+import { CategoryService } from './services/category.service';
 import { AdminAuthGuard } from './services/admin-auth-guard.service';
 import { UserService } from './services/user.service';
 import { AuthGuard } from './services/auth-guard.service';
@@ -10,6 +12,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { CustomFormsModule } from 'ng2-validation';
+import { DataTableModule } from 'angular5-data-table';
 
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
@@ -21,6 +26,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
 
 
 @NgModule({
@@ -34,10 +40,14 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     LoginComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    CustomFormsModule,
+    DataTableModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -48,7 +58,9 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     AuthService,
     AuthGuard,
     UserService,
-    AdminAuthGuard
+    AdminAuthGuard,
+    CategoryService,
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })
