@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor(private user: UserService, private auth: AuthService, private router: Router) {
+
+
     auth.user$.subscribe(user => {
       if(user) {
 

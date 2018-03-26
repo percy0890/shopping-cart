@@ -16,7 +16,6 @@ export class UserService {
       phoneNo: user.phoneNumber,
       photoUrl: user.photoURL
     })
-    console.log(user);
   }
 
   getAppUser(uid: string): FirebaseObjectObservable<AppUser> {
