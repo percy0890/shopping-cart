@@ -1,3 +1,7 @@
+import { AdminAuthGuard } from './services/admin-auth-guard.service';
+import { UserService } from './services/user.service';
+import { AuthGuard } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,7 +44,12 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuard,
+    UserService,
+    AdminAuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

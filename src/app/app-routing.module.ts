@@ -1,3 +1,5 @@
+import { AdminAuthGuard } from './services/admin-auth-guard.service';
+import { AuthGuard } from './services/auth-guard.service';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
@@ -10,48 +12,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-    {
-      path: '',
-      redirectTo: '/',
-      pathMatch: 'full'
-    },
-    {
-      path: '',
-      component: HomeComponent
-    },
-    {
-      path: 'shopping-cart',
-      component: ShoppingCartComponent
-    },
-    {
-      path: 'check-out',
-      component: CheckOutComponent
-    },
-    {
-      path: 'order-success',
-      component: OrderSuccessComponent
-    },
-    {
-      path: 'login',
-      component: LoginComponent
-    },
-    {
-      path: 'my/orders',
-      component: MyOrdersComponent
-    },
-    {
-      path: 'admin/products',
-      component: AdminProductsComponent
-    },
-    {
-      path: 'admin/orders',
-      component: AdminOrdersComponent
-    },
-    {
-      path: '**',
-      redirectTo: '/',
-      pathMatch: 'full'
-    },
+    { path: '', redirectTo: '/', pathMatch: 'full' },
+
+    { path: '', component: HomeComponent },
+    { path: 'shopping-cart', component: ShoppingCartComponent },
+    { path: 'login', component: LoginComponent },
+    
+    { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
+    { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuard] },
+    { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
+
+    { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, AdminAuthGuard] },
+    { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuard, AdminAuthGuard] },
+
+    { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({
